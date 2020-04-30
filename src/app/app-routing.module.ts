@@ -5,11 +5,11 @@ import { ProblemeComponent } from './probleme/probleme.component';
 
 
 const routes: Routes = [
+  { path:'probleme', component:ProblemeComponent},
+
   { path:'accueil', component:AccueilComponent},
   { path:'', redirectTo:'accueil', pathMatch:'full'},
   { path:'**', redirectTo:'accueil', pathMatch:'full'}, //si la route est inexistante, rediriger l'utilisateur vers Accueil
-
-  { path:'probleme', component:ProblemeComponent},
 ];
 
 @NgModule({
