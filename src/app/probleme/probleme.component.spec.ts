@@ -24,14 +24,8 @@ describe('ProblemeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('champ nom du problème doit comporter au moins 5 caractères', () => {
-    let zone = component.problemeForm.controls['nomProbleme'];
-    zone.setValue('a'.repeat(5));
-    expect(zone.valid).toBeTruthy();
-  });
   
-  it('nom du problème invalide avec 2 caractères ', () => {
+  it('Zone PRÉNOM invalide avec 2 caractères', () => {
     let errors = {};
     let zone = component.problemeForm.get('nomProbleme');
     zone.setValue('a'.repeat(2));
@@ -39,4 +33,9 @@ describe('ProblemeComponent', () => {
     expect(errors['minlength']).toBeTruthy();
   });
 
+  it('Zone PRÉNOM valide avec 3 caractères', () => {
+    let zone = component.problemeForm.controls['nomProbleme'];
+    zone.setValue('a'.repeat(3));
+    expect(zone.valid).toBeTruthy();
+  });
 });
