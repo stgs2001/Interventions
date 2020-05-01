@@ -16,5 +16,4 @@ export class ProblemeComponent implements OnInit {
       nomProbleme: ['',[Validators.minLength(5)]]
     });
   }
-
 }
